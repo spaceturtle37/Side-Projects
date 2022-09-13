@@ -1,0 +1,456 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18725,        448]
+NotebookOptionsPosition[     18051,        429]
+NotebookOutlinePosition[     18450,        445]
+CellTagsIndexPosition[     18407,        442]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"orig", " ", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"xmax", " ", "=", " ", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"1", "+", "1"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.853700902617673*^9, 3.8537009110234394`*^9}, {
+   3.853700965441127*^9, 3.85370096585013*^9}, {3.853701024167833*^9, 
+   3.8537011743000546`*^9}, {3.853701334396192*^9, 3.8537013414591093`*^9}, {
+   3.8537014724428897`*^9, 3.853701492009344*^9}, 3.8537023375556946`*^9, {
+   3.85370270991191*^9, 3.8537027324059224`*^9}, {3.8537031423524413`*^9, 
+   3.853703150997806*^9}, {3.8537032735123754`*^9, 3.8537032906436663`*^9}, {
+   3.8537035809052706`*^9, 3.8537036300516367`*^9}, {3.8537037592556934`*^9, 
+   3.8537037617171597`*^9}, {3.8537038835099497`*^9, 3.853704049585067*^9}, {
+   3.853704103258871*^9, 3.853704126206003*^9}, {3.8537048695721655`*^9, 
+   3.8537048701185284`*^9}, 3.853708112512699*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"ab6c1100-027e-408d-964b-71b9b8f2e20a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"y", "/.", 
+      RowBox[{"Solve", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Eigenvectors", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}],
+                    "]"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], ",", 
+                 RowBox[{
+                  RowBox[{"Eigenvectors", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}],
+                    "]"}], "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ".", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", "y"}], "}"}]}], ")"}], "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "/", 
+            RowBox[{
+             RowBox[{"Eigenvalues", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}], 
+              "]"}], "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], ")"}], "^", "2"}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Eigenvectors", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}],
+                    "]"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], ",", 
+                 RowBox[{
+                  RowBox[{"Eigenvectors", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}],
+                    "]"}], "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ".", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", "y"}], "}"}]}], ")"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "/", 
+            RowBox[{
+             RowBox[{"Eigenvalues", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}], 
+              "]"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], ")"}], "^", "2"}]}], 
+        "\[Equal]", "1"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "xmax"}], ",", "xmax"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "xmax"}], ",", "xmax"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "xmax"}], ",", "xmax"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}]}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Epilog", "->", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Arrow", "[", 
+         RowBox[{"{", 
+          RowBox[{"orig", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Eigenvectors", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}], 
+              "]"}], "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{
+             RowBox[{"Eigenvalues", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}], 
+              "]"}], "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}], "]"}], ",", 
+        RowBox[{"Arrow", "[", 
+         RowBox[{"{", 
+          RowBox[{"orig", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Eigenvectors", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}], 
+              "]"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{
+             RowBox[{"Eigenvalues", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}], 
+              "]"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Arrow", "[", 
+         RowBox[{"{", 
+          RowBox[{"orig", ",", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{
+              RowBox[{"Eigenvectors", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}], 
+               "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "*", 
+            RowBox[{
+             RowBox[{"Eigenvalues", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}], 
+              "]"}], "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}], "]"}], ",", 
+        RowBox[{"Arrow", "[", 
+         RowBox[{"{", 
+          RowBox[{"orig", ",", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{
+              RowBox[{"Eigenvectors", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}], 
+               "]"}], "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}], "*", 
+            RowBox[{
+             RowBox[{"Eigenvalues", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xx", ",", "\[Sigma]xy"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"\[Sigma]xy", ",", "\[Sigma]yy"}], "}"}]}], "}"}], 
+              "]"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Sigma]xx", ",", "1"}], "}"}], ",", "0", ",", "1"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Sigma]yy", ",", "1"}], "}"}], ",", "0", ",", "1"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Sigma]xy", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"\[Sigma]xx", "*", "\[Sigma]yy"}], "]"}]}], ",", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"\[Sigma]xx", "*", "\[Sigma]yy"}], "]"}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.853701170358405*^9, 3.853701221592517*^9}, {
+   3.8537012543457026`*^9, 3.853701281134288*^9}, {3.853701323479073*^9, 
+   3.853701456054998*^9}, {3.8537015271522713`*^9, 3.853701545881304*^9}, {
+   3.853701615740137*^9, 3.853701640167473*^9}, {3.8537017843717685`*^9, 
+   3.8537017865002947`*^9}, {3.853702000313326*^9, 3.853702085922758*^9}, {
+   3.8537021287106485`*^9, 3.8537023220011864`*^9}, {3.8537023564293795`*^9, 
+   3.85370239025424*^9}, {3.853702421116375*^9, 3.853702637267161*^9}, {
+   3.8537026797713704`*^9, 3.8537026827363544`*^9}, {3.8537027346497164`*^9, 
+   3.8537028340359592`*^9}, {3.8537028716174536`*^9, 
+   3.8537029382521954`*^9}, {3.8537030031808653`*^9, 
+   3.8537030043183565`*^9}, {3.853703075831357*^9, 3.853703085572872*^9}, {
+   3.8537032381217175`*^9, 3.85370323907152*^9}, {3.8537032942355947`*^9, 
+   3.853703305450382*^9}, {3.853703393818309*^9, 3.8537035831301966`*^9}, {
+   3.8537036981208043`*^9, 3.853703719387644*^9}, {3.8537037535736923`*^9, 
+   3.8537038132852974`*^9}, {3.853704133550825*^9, 3.853704150665372*^9}, {
+   3.853704253097839*^9, 3.853704290813568*^9}, {3.8537043235467076`*^9, 
+   3.8537043785227313`*^9}, {3.8537044581713142`*^9, 3.8537044637892933`*^9}, 
+   3.8537045023400273`*^9, {3.8537046212941484`*^9, 3.853704686430994*^9}, {
+   3.853704756085943*^9, 3.853704797229046*^9}, {3.8537048464755735`*^9, 
+   3.853704849107112*^9}, {3.8537051517290187`*^9, 3.8537051709765587`*^9}, {
+   3.853708263946513*^9, 3.853708287812022*^9}, {3.853708426635376*^9, 
+   3.8537084278296013`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"3db395e7-2133-48f2-b604-eaad7fca831f"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Sigma]xx$$ = 
+    1, $CellContext`\[Sigma]xy$$ = 0, $CellContext`\[Sigma]yy$$ = 0.246, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Sigma]xx$$], 1}, 0, 1}, {{
+       Hold[$CellContext`\[Sigma]yy$$], 1}, 0, 1}, {{
+       Hold[$CellContext`\[Sigma]xy$$], 0}, 
+      Dynamic[-Sqrt[$CellContext`\[Sigma]xx$$ $CellContext`\[Sigma]yy$$]], 
+      Dynamic[
+       Sqrt[$CellContext`\[Sigma]xx$$ $CellContext`\[Sigma]yy$$]]}}, 
+    Typeset`size$$ = {360., {180., 184.171875}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`\[Sigma]xx$$ = 
+        1, $CellContext`\[Sigma]xy$$ = 0, $CellContext`\[Sigma]yy$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        ReplaceAll[$CellContext`y, 
+         Solve[(Part[
+               Dot[{
+                 Part[
+                  
+                  Eigenvectors[{{$CellContext`\[Sigma]xx$$, $CellContext`\
+\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, $CellContext`\[Sigma]yy$$}}], 1], 
+                 Part[
+                  
+                  Eigenvectors[{{$CellContext`\[Sigma]xx$$, $CellContext`\
+\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, $CellContext`\[Sigma]yy$$}}], 
+                  2]}, {$CellContext`x, $CellContext`y}], 1]/Part[
+              
+              Eigenvalues[{{$CellContext`\[Sigma]xx$$, \
+$CellContext`\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, \
+$CellContext`\[Sigma]yy$$}}], 1])^2 + (Part[
+               Dot[{
+                 Part[
+                  
+                  Eigenvectors[{{$CellContext`\[Sigma]xx$$, $CellContext`\
+\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, $CellContext`\[Sigma]yy$$}}], 1], 
+                 Part[
+                  
+                  Eigenvectors[{{$CellContext`\[Sigma]xx$$, $CellContext`\
+\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, $CellContext`\[Sigma]yy$$}}], 
+                  2]}, {$CellContext`x, $CellContext`y}], 2]/Part[
+              
+              Eigenvalues[{{$CellContext`\[Sigma]xx$$, \
+$CellContext`\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, \
+$CellContext`\[Sigma]yy$$}}], 2])^2 == 
+          1]], {$CellContext`x, -$CellContext`xmax, $CellContext`xmax}, 
+        PlotRange -> {{-$CellContext`xmax, $CellContext`xmax}, \
+{-$CellContext`xmax, $CellContext`xmax}}, AspectRatio -> {1, 1}, 
+        AxesLabel -> {"x", "y"}, Epilog -> {
+          Arrow[{$CellContext`orig, Part[
+              
+              Eigenvectors[{{$CellContext`\[Sigma]xx$$, \
+$CellContext`\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, \
+$CellContext`\[Sigma]yy$$}}], 1] Part[
+              
+              Eigenvalues[{{$CellContext`\[Sigma]xx$$, \
+$CellContext`\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, \
+$CellContext`\[Sigma]yy$$}}], 1]}], 
+          Arrow[{$CellContext`orig, Part[
+              
+              Eigenvectors[{{$CellContext`\[Sigma]xx$$, \
+$CellContext`\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, \
+$CellContext`\[Sigma]yy$$}}], 2] Part[
+              
+              Eigenvalues[{{$CellContext`\[Sigma]xx$$, \
+$CellContext`\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, \
+$CellContext`\[Sigma]yy$$}}], 2]}], 
+          Arrow[{$CellContext`orig, (-Part[
+               
+               Eigenvectors[{{$CellContext`\[Sigma]xx$$, \
+$CellContext`\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, \
+$CellContext`\[Sigma]yy$$}}], 1]) Part[
+              
+              Eigenvalues[{{$CellContext`\[Sigma]xx$$, \
+$CellContext`\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, \
+$CellContext`\[Sigma]yy$$}}], 1]}], 
+          Arrow[{$CellContext`orig, (-Part[
+               
+               Eigenvectors[{{$CellContext`\[Sigma]xx$$, \
+$CellContext`\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, \
+$CellContext`\[Sigma]yy$$}}], 2]) Part[
+              
+              Eigenvalues[{{$CellContext`\[Sigma]xx$$, \
+$CellContext`\[Sigma]xy$$}, {$CellContext`\[Sigma]xy$$, \
+$CellContext`\[Sigma]yy$$}}], 2]}]}], 
+      "Specifications" :> {{{$CellContext`\[Sigma]xx$$, 1}, 0, 
+         1}, {{$CellContext`\[Sigma]yy$$, 1}, 0, 
+         1}, {{$CellContext`\[Sigma]xy$$, 0}, 
+         Dynamic[-Sqrt[$CellContext`\[Sigma]xx$$ $CellContext`\[Sigma]yy$$]], 
+         Dynamic[
+          Sqrt[$CellContext`\[Sigma]xx$$ $CellContext`\[Sigma]yy$$]]}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{637., {210.134033203125, 215.865966796875}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.8537046827294188`*^9, 3.8537046866987495`*^9}, {
+   3.853704764964687*^9, 3.853704797713933*^9}, {3.853704849642605*^9, 
+   3.8537048748550844`*^9}, 3.8537051713281784`*^9, 3.853708125938409*^9, 
+   3.8537081701797304`*^9, {3.8537082731866035`*^9, 3.853708313842202*^9}, {
+   3.8537084282670856`*^9, 3.8537084526890316`*^9}, 3.853708489783244*^9, 
+   3.8720877116032467`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"731b8277-d7d3-4fdb-87ec-6affa2f6081c"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.853702391394368*^9, 
+  3.8537048617840767`*^9},ExpressionUUID->"a73b2c6e-b0a9-414b-a872-\
+15ca797320c9"]
+},
+WindowSize->{949, 475},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (February 4, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"25fb8c76-1755-4438-8f16-28d61c553002"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1070, 19, 48, "Input",ExpressionUUID->"ab6c1100-027e-408d-964b-71b9b8f2e20a"],
+Cell[CellGroupData[{
+Cell[1653, 43, 10469, 256, 314, "Input",ExpressionUUID->"3db395e7-2133-48f2-b604-eaad7fca831f"],
+Cell[12125, 301, 5755, 120, 467, "Output",ExpressionUUID->"731b8277-d7d3-4fdb-87ec-6affa2f6081c"]
+}, Open  ]],
+Cell[17895, 424, 152, 3, 28, "Input",ExpressionUUID->"a73b2c6e-b0a9-414b-a872-15ca797320c9"]
+}
+]
+*)
+
